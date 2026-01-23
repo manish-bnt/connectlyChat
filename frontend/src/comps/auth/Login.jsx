@@ -115,6 +115,14 @@ export default function Login() {
   return (
     <>
       <PopupMsg message={message} />
+      <div className="px-2 py-6 text-center" style={{
+        backgroundColor: '#fff3cd',
+        color: '#856404',
+        padding: '10px 15px',
+        border: '1px solid #ffeeba',
+      }}>
+        Login may take time because data comes from render and it takes a while.
+      </div>
       <div className='container mx-auto'>
         <h1 className="text-2xl text-center mt-4">Login your account</h1>
         <form

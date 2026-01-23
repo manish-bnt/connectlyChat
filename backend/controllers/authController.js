@@ -44,7 +44,8 @@ async function registerUser(req, res) {
           username,
           password: hashPassword,
           isDeleted: false,
-          deletedAt: null
+          deletedAt: null,
+          isVerified: true
         }
       )
 

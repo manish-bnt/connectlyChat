@@ -83,6 +83,14 @@ export default function Signup() {
   return (
     <div className='container mx-auto'>
       <PopupMsg message={message} />
+      <div className="px-2 py-6 text-center" style={{
+        backgroundColor: '#fff3cd',
+        color: '#856404',
+        padding: '10px 15px',
+        border: '1px solid #ffeeba',
+      }}>
+        Signup may take time because data comes from render and it takes a while.
+      </div>
       <h1 className="text-2xl text-center mt-4">Create your account</h1>
 
       <form onSubmit={handleSubmit} className='w-full max-w-md mx-auto mt-2 p-6 md:rounded-lg shadow-md'>
