@@ -94,7 +94,8 @@ export default function MyProfile() {
                     {preview ? (
                       <img className='w-full h-full object-cover' src={preview} alt="preview" />
                     ) : logUser?.profile ? (
-                      <img className='w-full h-full object-cover' src={`${import.meta.env.VITE_API_URL}${logUser.profile}`} alt="profile" />
+                      <img className='w-full h-full object-cover' src={`${import.meta.env.VITE_API_URL}${logUser.linkedUser.profile}`} alt="profile" />
+                      // <img className='w-full h-full object-cover' src={`${import.meta.env.VITE_API_URL}${logUser.profile}`} alt="profile" />
                     ) : (
                       <p className='font-bold text-4xl'>{properCase(logUser?.username[0])}</p>
                     )}
