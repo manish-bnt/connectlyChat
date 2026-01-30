@@ -65,6 +65,7 @@ export default function EditContactInfo({ setPanel, friend }) {
       }
       // setMessage({ type: 'success', text: data.msg || 'Contact deleted successfully!' })
       setContacts(data.data)
+      fetchContacts()
       navigate('/')
     } catch (error) {
       console.log(error.message)
@@ -158,3 +159,4 @@ export default function EditContactInfo({ setPanel, friend }) {
     </div>
   )
 }
+
