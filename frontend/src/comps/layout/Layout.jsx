@@ -6,7 +6,7 @@ import { Usercontext } from '../../App'
 export default function Layout() {
   const { selectedUser } = useContext(Usercontext)
   return (
-    <div className="h-screen flex flex-col overflow-hidden">
+    <div className="h-[100dvh] flex flex-col overflow-hidden">
       <header className={`${selectedUser ? "hidden md:block" : "block"} h-16 shrink-0 sticky top-0 z-50`}>
         <Navbar />
       </header>
@@ -17,5 +17,6 @@ export default function Layout() {
     </div>
   )
 }
+
 
 
