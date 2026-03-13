@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 const express = require('express')
 const { Server } = require('socket.io')
 const cors = require('cors')
@@ -39,7 +39,6 @@ const io = new Server(server, {
 // This allows us to access io inside controllers
 app.set('io', io)
 
-require('dotenv').config()
 
 // Enable CORS for all requests
 // app.use(cors())
