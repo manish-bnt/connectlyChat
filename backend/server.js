@@ -29,7 +29,7 @@ const server = http.createServer(app)
 const io = new Server(server, {
   cors: {
     // origin: "http://localhost:5173",
-    origin: process.env.CLIENT_URL,
+    origin: [process.env.CLIENT_URL, process.env.LOCAL_URL],
     methods: ["GET", "POST"]
   }
 });
@@ -50,12 +50,13 @@ require('dotenv').config()
 app.use(cors({
   // origin: "*", // ya specific frontend URL
   // credentials: true
-  // origin: [
-  //   // "https://connectly-web.netlify.app",
-  //   // "http://localhost:5173",
-  //   // "http://192.168.100.5:5173"
-  //   process.env.CLIENT_URL
-  // ],
+  origin: [
+    // "https://connectly-web.netlify.app",
+    // "http://localhost:5173",
+    // "http://192.168.100.5:5173"
+    process.env.LOCAL_URL,
+    process.env.CLIENT_URL
+  ],
 
   // origin: process.env.CLIENT_URL,
   methods: ["GET", "POST", "PUT", "DELETE"],
