@@ -27,12 +27,6 @@ console.log("LOCAL_URL:", process.env.LOCAL_URL)
 app.set('io', io)
 
 
-// Enable CORS for all requests
-// app.use(cors())
-
-// app.options("*", cors());
-
-
 app.use(cors({
   // origin: "*", // ya specific frontend URL
   // credentials: true

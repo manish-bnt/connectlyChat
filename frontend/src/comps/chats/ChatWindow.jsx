@@ -107,7 +107,7 @@ export default function ChatWindow() {
   return (
     <div className="w-full h-full bg-yellow-400 fixed inset-0 md:static md:inset-auto overflow-hidden">
 
-      <div className={`bg-red-200 relative w-full h-full`}>
+      <div className={`relative w-full h-full`}>
 
         {/* Chat Area */}
         <div className={`h-full w-full bg-emerald-50 flex flex-col `}>

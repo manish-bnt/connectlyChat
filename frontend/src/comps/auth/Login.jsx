@@ -5,6 +5,7 @@ import { Usercontext } from '../../App'
 import PopupMsg from '../PopupMsg'
 import { v4 as uuidv4 } from "uuid"
 import useAutoClearMessage from '../../customHooks/useAutoClearMessage'
+import Spinner from '../Spinner'
 
 export default function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" })
@@ -138,6 +139,7 @@ export default function Login() {
               type="text"
               id='email'
               name='email'
+              autoComplete="current-email"
               value={formData.email}
               onChange={handleChange}
               className='w-full h-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 px-2' />
@@ -152,24 +154,13 @@ export default function Login() {
               type="password"
               id='password'
               name='password'
+              autoComplete="current-password"
               value={formData.password}
               onChange={handleChange}
               className='w-full h-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 px-2' />
           </div>
 
           {/* Action Button */}
-
-          {/* <div className='flex gap-2'>
-            <button
-              type='submit'
-              disabled={loading}
-              className='bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-4 py-2 rounded-md cursor-pointer'>
-              {loading ? 'Wait...' : 'Login'}
-            </button>
-
-            <Link to="/signup" className='block mt-2 text-emerald-900'>Create an account!</Link>
-
-          </div> */}
 
           <div className="flex flex-col gap-3 mt-4">
 

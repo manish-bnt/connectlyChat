@@ -19,7 +19,6 @@ function App() {
 
   const [logUser, setLogUser] = useState(null)
   const [contacts, setContacts] = useState([])
-  console.log("contacts: ", contacts)
   const [messages, setMessages] = useState([])
   const [lastMsg, setLastMsg] = useState(null)
   const [selectedUser, setSelectedUser] = useState(null);
