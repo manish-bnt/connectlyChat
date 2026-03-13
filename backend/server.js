@@ -11,29 +11,16 @@ const app = express()
 // Create HTTP server so we can use socket.io with Express
 const server = http.createServer(app)
 
-// Path for uploads folder
-// const UPLOAD_DIR = path.join(__dirname, 'uploads')
-
-// Create uploads folder if it does not exist
-// if (!fs.existsSync(UPLOAD_DIR)) {
-//   fs.mkdirSync(UPLOAD_DIR)
-// }
-
-// Initialize socket.io server
-// const io = new Server(server, {
-//   cors: {
-//     origin: '*'
-//   }
-// })
-
 const io = new Server(server, {
   cors: {
     origin: [process.env.CLIENT_URL, process.env.LOCAL_URL],
     methods: ["GET", "POST"],
-    credentials:true
+    credentials: true
   }
 });
 
+console.log("CLIENT_URL:", process.env.CLIENT_URL)
+console.log("LOCAL_URL:", process.env.LOCAL_URL)
 
 // Store socket.io instance in app
 // This allows us to access io inside controllers
@@ -50,9 +37,6 @@ app.use(cors({
   // origin: "*", // ya specific frontend URL
   // credentials: true
   origin: [
-    // "https://connectly-web.netlify.app",
-    // "http://localhost:5173",
-    // "http://192.168.100.5:5173"
     process.env.LOCAL_URL,
     process.env.CLIENT_URL
   ],
